@@ -1,0 +1,46 @@
+{
+  "name": "test-app",
+  "version": "1.0.0",
+  "description": "test app",
+  "author": "Deepan Purushothaman",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "deploy": "export AWS_PROFILE=bloominmind && cross-env NODE_ENV=production npm run build && sls deploy",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "@nuxtjs/axios": "^5.4.1",
+    "base64-url": "^2.2.0",
+    "bcryptjs": "^2.4.3",
+    "cookieparser": "^0.1.0",
+    "express": "^4.16.3",
+    "js-cookie": "^2.2.0",
+    "mysql2": "^1.6.5",
+    "nodemailer": "^5.1.1",
+    "nuxt": "^2.5.1",
+    "serverless-apigw-binary": "^0.4.4",
+    "serverless-http": "^1.9.1",
+    "simple-encryptor": "^2.0.0",
+    "uniqid": "^5.0.3",
+    "vee-validate": "^2.2.0",
+    "vuetify": "^1.5.7"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.2",
+    "nodemon": "^1.18.10",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "aws-sdk": "^2.427.0",
+    "cross-env": "^5.2.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "serverless-domain-manager": "^2.6.5",
+    "serverless-dynamodb-local": "^1.0.2",
+    "serverless-offline": "^3.25.17"
+  }
+}
